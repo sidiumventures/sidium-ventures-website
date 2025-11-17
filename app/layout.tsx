@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Roboto } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -34,6 +35,18 @@ export default function RootLayout({
         className={`${manrope.variable} ${roboto.variable} antialiased`}
       >
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E1GHW7T2V1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-E1GHW7T2V1');
+          `}
+        </Script>
       </body>
     </html>
   );
