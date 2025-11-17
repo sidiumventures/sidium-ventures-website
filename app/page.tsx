@@ -134,7 +134,7 @@ export default function Home() {
           </p>
           <div className="max-w-xs mx-auto mb-8">
             <Image
-              src="/sidium-ventures-logo-HD.png"
+              src="/sidium-ventures-logo-animated.svg"
               alt="Sidium Ventures Logo"
               width={400}
               height={200}
